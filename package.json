@@ -1,0 +1,66 @@
+{
+  "author": "Rocket Station <contact@rstation.io> (https://rstation.io)",
+  "bugs": "https://github.com/rocketstation/starter-kit/issues",
+  "contributors": [
+    "Oleksii Bilous <oleksiibilous@rstation.io> (https://rstation.io)",
+    "Oleksii Pysanko <oleksiipysanko@rstation.io> (https://rstation.io)"
+  ],
+  "dependencies": {
+    "@rocketstation/change-case": "2",
+    "core-js": "3",
+    "date-fns": "2"
+  },
+  "description": "Rocket Station boilerplate",
+  "devDependencies": {
+    "@babel/core": "7",
+    "@babel/plugin-proposal-export-default-from": "7",
+    "@babel/plugin-proposal-export-namespace-from": "7",
+    "@babel/plugin-proposal-nullish-coalescing-operator": "7",
+    "@babel/plugin-proposal-optional-chaining": "7",
+    "@babel/plugin-syntax-dynamic-import": "7",
+    "@babel/preset-env": "7",
+    "@rocketstation/babel-plugin-convention": "1",
+    "@rocketstation/convention": "3",
+    "babel-eslint": "10",
+    "babel-loader": "8",
+    "copy-webpack-plugin": "5",
+    "dotenv-webpack": "1",
+    "eslint": "6",
+    "eslint-config-prettier": "6",
+    "eslint-config-standard": "14",
+    "eslint-loader": "3",
+    "eslint-plugin-import": "2",
+    "eslint-plugin-node": "11",
+    "eslint-plugin-prettier": "3",
+    "eslint-plugin-promise": "4",
+    "eslint-plugin-standard": "4",
+    "express": "4",
+    "lerna": "3",
+    "prettier": "1",
+    "webpack": "4",
+    "webpack-cli": "3",
+    "webpack-dev-middleware": "3",
+    "webpack-hot-middleware": "2",
+    "webpackbar": "4"
+  },
+  "homepage": "https://github.com/rocketstation/starter-kit",
+  "keywords": [
+    "js",
+    "javascript",
+    "web",
+    "api"
+  ],
+  "license": "MIT",
+  "name": "starter-kit",
+  "repository": "github:rocketstation/starter-kit",
+  "scripts": {
+    "api": "npx lerna run serve --scope api-* --ignore api-job-* --stream --concurrency=8",
+    "api-migrate": "npx lerna run migrate --scope api-* --stream",
+    "docker-down": "docker-compose -p starter-kit down",
+    "docker-up": "docker-compose -p starter-kit up",
+    "init": "npx lerna bootstrap",
+    "web": "npx lerna run serve --scope web --stream",
+    "web-build": "NODE_ENV=production npx lerna run build --scope web --stream"
+  },
+  "version": "1.0.0"
+}
