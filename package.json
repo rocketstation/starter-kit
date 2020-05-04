@@ -54,7 +54,7 @@
   "name": "starter-kit",
   "repository": "github:rocketstation/starter-kit",
   "scripts": {
-    "api": "npx lerna run serve --scope api-* --ignore api-job-* --stream --concurrency=8",
+    "api": "npx lerna run serve --scope api-* --ignore api-job-* --stream",
     "api-migrate": "npx lerna run migrate --scope api-* --stream",
     "docker-down": "docker-compose -p starter-kit down",
     "docker-up": "docker-compose -p starter-kit up",

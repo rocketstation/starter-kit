@@ -19,7 +19,11 @@ module.exports = (origin, app, mode) => {
 
   config.entry = './index.js'
 
-  config.externals = [wpExternals()]
+  config.externals = [
+    wpExternals({
+      modulesDir: 'api/node_modules',
+    }),
+  ]
 
   config.node = {
     __dirname: false,
@@ -29,6 +33,8 @@ module.exports = (origin, app, mode) => {
     global: false,
     process: false,
   }
+
+  config.target = 'node'
 
   switch (mode) {
     case MODE.development: {

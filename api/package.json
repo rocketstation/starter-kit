@@ -4,17 +4,17 @@
   ],
   "dependencies": {
     "@koa/cors": "3",
+    "got": "11",
+    "ioredis": "4",
     "jsonwebtoken": "8",
-    "knex": "0.20",
+    "knex": "0.21",
     "koa": "2",
     "koa-body": "4",
     "koa-morgan": "1",
     "koa-router": "8",
     "objection": "2",
     "objection-db-errors": "1",
-    "pg": "7",
-    "request": "2",
-    "request-promise": "4"
+    "pg": "8"
   },
   "devDependencies": {
     "nodemon": "2",

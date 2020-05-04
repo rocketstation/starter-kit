@@ -92,7 +92,7 @@ module.exports = Object.entries(convention.project(__dirname)).reduce(
 
           config.plugins = [
             ...config.plugins,
-            new WPDotenv({ path: path.resolve(config.context, '.env') }),
+            new WPDotenv({ path: path.resolve(origin, '.env') }),
             new webpack.HotModuleReplacementPlugin(),
           ]
 
@@ -113,7 +113,9 @@ module.exports = Object.entries(convention.project(__dirname)).reduce(
         },
       }
 
-      if (!scope || scope === config.name) r.push(config)
+      if (!scope || scope === config.name) {
+        r.push(config)
+      }
     })
 
     return r
