@@ -1,6 +1,7 @@
 const path = require('path')
 
 const webpack = require('webpack')
+
 const wpExternals = require('webpack-node-externals')
 const WPNodemon = require('nodemon-webpack-plugin')
 

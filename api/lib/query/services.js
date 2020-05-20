@@ -3,7 +3,7 @@ const parse = (query, conditions) => {
     const [conditions] = args
 
     if (!kind.startsWith('insert') && Array.isArray(conditions)) {
-      return q[kind](function() {
+      return q[kind](function () {
         return parse(this, conditions)
       })
     }

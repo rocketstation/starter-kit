@@ -1,9 +1,11 @@
-const convention = require('@rocketstation/convention')
 const path = require('path')
 
 const webpack = require('webpack')
+
 const WPDotenv = require('dotenv-webpack')
 const WPProgressBar = require('webpackbar')
+
+const convention = require('@rocketstation/convention')
 
 const { name, version } = require('./package.json')
 

@@ -1,9 +1,7 @@
 exports.up = (knex) => {
   return knex.schema.createTable('accounts', (t) => {
     t.increments('id').primary()
-    t.string('email')
-      .notNullable()
-      .unique()
+    t.string('email').notNullable().unique()
   })
 }
 

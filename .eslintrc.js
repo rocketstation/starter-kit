@@ -15,11 +15,16 @@ module.exports = {
     'arrow-body-style': ['error', 'always'],
     'complexity': ['error', 5],
     'curly': ['error', 'multi-line'],
+    'import/export': 'off',
     'max-lines': ['error', 255],
     'prettier/prettier': 'error',
-    'sort-keys': ['error', 'asc', {
-      caseSensitive: false,
-      natural: true
-    }]
+    'sort-keys': [
+      'error',
+      'asc',
+      {
+        caseSensitive: false,
+        natural: true,
+      },
+    ],
   },
 }

@@ -6,10 +6,7 @@ import { log } from './log'
 export const setup = () => {
   const koa = new Koa()
 
-  koa
-    .use(koaCors())
-    .use(log)
-    .use(handle)
+  koa.use(koaCors()).use(log).use(handle)
 
   return koa
 }

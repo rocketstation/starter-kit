@@ -1,6 +1,6 @@
 # Starter Kit
 
-Starter Kit is our boilerplate for web development
+Our boilerplate for development
 
 ## License
 

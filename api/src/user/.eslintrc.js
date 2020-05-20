@@ -3,11 +3,12 @@ const path = require('path')
 
 module.exports = {
   env: { node: true },
-  globals: Object.keys(
-    convention.apiApp(path.resolve(__dirname)),
-  ).reduce((r, v) => {
-    r[v] = 'readonly'
+  globals: Object.keys(convention.apiApp(path.resolve(__dirname))).reduce(
+    (r, v) => {
+      r[v] = 'readonly'
 
-    return r
-  }, {}),
+      return r
+    },
+    {},
+  ),
 }

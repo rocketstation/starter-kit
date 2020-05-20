@@ -24,19 +24,21 @@ module.exports = (origin, app, mode) => {
 
   config.entry = './index.js'
 
-  config.module.rules.push({
-    test: /\.css$/,
-    use: [{ loader: 'css-loader' }],
-  })
-
-  config.module.rules.push({
-    test: /\.svg$/,
-    use: [{ loader: '@svgr/webpack' }, { loader: 'file-loader' }],
-  })
-
-  config.plugins.push(new WPCopy(['robots.txt', 'offline.html']))
+  config.module.rules.push(
+    {
+      test: /\.css$/,
+      use: [{ loader: 'css-loader' }],
+    },
+    {
+      test: /\.svg$/,
+      use: [{ loader: '@svgr/webpack' }, { loader: 'file-loader' }],
+    },
+  )
 
   config.plugins.push(
+    new WPCopy({
+      patterns: [{ from: 'robots.txt' }, { from: 'offline.html' }],
+    }),
     new WPServiceWorker({
       cache: {
         offline: true,
@@ -70,6 +72,7 @@ module.exports = (origin, app, mode) => {
       config.plugins.push(
         new WPClean(),
         new WPCompression({
+          exclude: /\.(mp3|mp4)$/,
           filename: '[path]',
           minRatio: Infinity,
         }),

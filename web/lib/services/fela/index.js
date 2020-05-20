@@ -1,9 +1,13 @@
 import * as alias from '@rocketstation/skin/build/alias/index'
+
 import { createRenderer } from 'fela'
+
 import pluginCustomProperty from 'fela-plugin-custom-property'
 import pluginFallbackValue from 'fela-plugin-fallback-value'
 import pluginPrefixer from 'fela-plugin-prefixer'
 import pluginUnit from 'fela-plugin-unit'
+
+import reset from './reset'
 
 const config = {
   devMode: IS_DEVELOPMENT,
@@ -32,6 +36,8 @@ const config = {
 }
 
 const renderer = createRenderer(config)
+
+renderer.renderStatic(reset)
 
 renderer.renderFont('Public Sans', [libAssets.publicSans], {
   fontDisplay: 'optional',
