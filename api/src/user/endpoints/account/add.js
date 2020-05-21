@@ -11,10 +11,6 @@ export default () => {
       }
     },
     async (ctx) => {
-      if (IS_DEVELOPMENT === true) {
-        console.log('test')
-      }
-
       const { email } = ctx.request.body
 
       ctx.body = await Account.query()
