@@ -12,6 +12,8 @@ export * as web from './web'
 export * as weights from './weights'
 export countries from './countries'
 
+export const title = 'Rocket Station'
+
 export const unit = 16
 export const step = 12
 

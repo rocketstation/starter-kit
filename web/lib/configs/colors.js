@@ -5,8 +5,8 @@ export const important = {
 }
 
 export const major = {
-  dark: 'hsl(0,0%,0%)',
-  light: 'hsl(0,0%,100%)',
+  dark: 'hsl(0,0%,100%)',
+  light: 'hsl(0,0%,0%)',
 }
 
 export const minorDark = {

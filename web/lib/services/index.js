@@ -75,6 +75,7 @@ export class Req {
 export * as dt from './dt'
 export fela from './fela'
 export i18n from './i18n'
+export link from './link'
 export * as req from './req'
 export * as screen from './screen'
 export { combineRules as skins } from 'fela'

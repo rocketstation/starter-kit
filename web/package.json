@@ -12,6 +12,7 @@
     "fela-plugin-unit": "11",
     "i18next": "19",
     "i18next-browser-languagedetector": "4",
+    "linkify-it": "3",
     "react": "16",
     "react-dom": "16",
     "react-fela": "11",
@@ -19,7 +20,8 @@
     "react-hook-form": "5",
     "react-i18next": "11",
     "react-router-dom": "5",
-    "serviceworker-webpack-plugin": "1"
+    "serviceworker-webpack-plugin": "1",
+    "tlds": "1"
   },
   "devDependencies": {
     "@svgr/webpack": "5",
