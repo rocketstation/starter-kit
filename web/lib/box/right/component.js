@@ -1,6 +1,6 @@
 const Component = ({ space, skinSelf, ...props }) => {
-  return $box({
-    skin: lib.skins(libSkins.box, libSkins.contentRight({ space }), skinSelf),
+  return $(LibBox, {
+    skinSelf: lib.skins(libSkins.contentRight({ space }), skinSelf),
     ...props,
   })
 }

@@ -1,13 +1,7 @@
-const Component = ({ space, skinSelf, ...props }) => {
-  return $box({
-    skin: lib.skins(
-      {
-        kind: 'track',
-        trackDirection: 'x',
-      },
-      libSkins.contentRight({ space }),
-      skinSelf,
-    ),
+const Component = ({ direction, space, skinSelf, ...props }) => {
+  return $(LibTrack, {
+    direction: 'x',
+    skinSelf: lib.skins(libSkins.contentRight({ space }), skinSelf),
     ...props,
   })
 }
