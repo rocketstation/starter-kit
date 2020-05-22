@@ -38,3 +38,23 @@ export const light = {
   dark: 'hsl(0,0%,100%)',
   light: 'hsl(0,0%,100%)',
 }
+
+export const succeed = {
+  dark: 'hsl(0,0%,0%)',
+  light: 'hsl(0,0%,100%)',
+}
+
+export const inform = {
+  dark: 'hsl(0,0%,0%)',
+  light: 'hsl(0,0%,100%)',
+}
+
+export const warn = {
+  dark: 'hsl(0,0%,0%)',
+  light: 'hsl(0,0%,100%)',
+}
+
+export const failed = {
+  dark: 'hsl(0,0%,0%)',
+  light: 'hsl(0,0%,100%)',
+}
