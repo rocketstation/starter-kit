@@ -20,7 +20,7 @@ const scope = process.env.SCOPE
 
 module.exports = Object.entries(convention.project(__dirname)).reduce(
   (r, [k, { lib = {}, src = [] } = {}]) => {
-    src.forEach(app => {
+    src.forEach((app) => {
       const origin = path.resolve(__dirname, k)
 
       const config = require(path.resolve(origin, 'webpack.config.js'))(
@@ -96,8 +96,8 @@ module.exports = Object.entries(convention.project(__dirname)).reduce(
             config.plugins = [
               ...config.plugins,
               new WPDotenv({
-                defaults: path.resolve(origin, '.env.defaults'),
-                path: path.resolve(origin, '.env'),
+                defaults: path.resolve(origin, '.env'),
+                path: path.resolve(origin, 'tmp', '.env'),
               }),
               new webpack.HotModuleReplacementPlugin(),
             ]
