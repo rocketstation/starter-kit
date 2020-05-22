@@ -1,10 +1,12 @@
-const Component = ({ skinSelf, ...props }) => {
+const Component = ({ kind = 'important', skinSelf, ...props }) => {
   return $(LibButtonSelf, {
     skinSelf: lib.skins(
       ({ theme }) => {
         return libButtonSkins.self({ isDisabled: props.isDisabled, theme })
       },
-      libButtonSkins.important,
+      ({ theme }) => {
+        return libButtonSkins.cta({ kind, theme })
+      },
       skinSelf,
     ),
     ...props,

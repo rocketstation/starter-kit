@@ -31,10 +31,10 @@ export const self = ({ isDisabled, theme } = {}) => {
   return rules
 }
 
-export const important = ({ theme } = {}) => {
+export const cta = ({ kind = 'important', theme } = {}) => {
   const rules = {
-    box: LIB.colors.important[theme],
-    boxBorder: LIB.colors.important[theme],
+    box: LIB.colors[kind][theme],
+    boxBorder: LIB.colors[kind][theme],
     boxBorderKind: true,
     boxBorderSize: 1,
     boxCorner: LIB.corners.m,
@@ -43,7 +43,7 @@ export const important = ({ theme } = {}) => {
     text: LIB.colors.light[theme],
     [lib.skin.onHover]: {
       box: LIB.colors.minorLight[theme],
-      text: LIB.colors.important[theme],
+      text: LIB.colors[kind][theme],
     },
   }
 
