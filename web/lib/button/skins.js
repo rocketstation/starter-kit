@@ -41,10 +41,7 @@ export const cta = ({ kind = 'important', theme } = {}) => {
     boxSpaceInnerX: LIB.spaces.s,
     boxSpaceInnerY: LIB.spaces.sx,
     text: LIB.colors.light[theme],
-    [lib.skin.onHover]: {
-      box: LIB.colors.minorLight[theme],
-      text: LIB.colors[kind][theme],
-    },
+    [lib.skin.onHover]: { box: lib.hsla(LIB.colors[kind][theme])(33) },
   }
 
   return rules
