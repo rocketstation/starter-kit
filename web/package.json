@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "@rocketstation/black-box": "6",
+    "@rocketstation/black-box": "7",
     "@rocketstation/hsla": "4",
     "@rocketstation/local-storage": "3",
     "@rocketstation/skin": "4",
