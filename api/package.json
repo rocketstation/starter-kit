@@ -6,7 +6,7 @@
     "@koa/cors": "3",
     "got": "11",
     "ioredis": "4",
-    "jsonwebtoken": "8",
+    "jsonwebtoken": "9",
     "knex": "0.21",
     "koa": "2",
     "koa-body": "4",
