@@ -7,7 +7,7 @@
     "got": "11",
     "ioredis": "4",
     "jsonwebtoken": "8",
-    "knex": "0.21",
+    "knex": "2.4",
     "koa": "2",
     "koa-body": "4",
     "koa-morgan": "1",
